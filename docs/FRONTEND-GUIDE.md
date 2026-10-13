@@ -36,9 +36,9 @@ Dải màu chính dùng theo thứ tự `#FFFFFF → #E6FAFB → #85E9EB → #00
 
 Không dùng `#063F43`. Tiêu đề và nội dung dùng xám xanh trung tính để trang không bị tối. CTA chính dùng nền `#00CED3`, chữ trắng và weight 700 theo lựa chọn thương hiệu của người dùng.
 
-### Ngoại lệ màu vàng của Bike
+### Popup chi tiết Bike
 
-Màu vàng `#FFC500` chỉ được dùng bên trong popup chi tiết ba hình thức Bike theo `UI-SPEC.md`. Không dùng vàng cho lợi ích chung, form, CTA toàn trang, header, footer hoặc các trang Taxi/RTO/Van.
+Phần đầu popup chi tiết ba hình thức Bike dùng nền `#00CED3` đồng nhất theo `UI-SPEC.md`. Không dùng gradient hoặc mảng vàng.
 
 ### Tỷ lệ sử dụng gợi ý
 
@@ -166,7 +166,6 @@ Màu vàng `#FFC500` chỉ được dùng bên trong popup chi tiết ba hình t
   --color-border: #C9EFF0;
   --color-error: #B42318;
   --color-success: #16794B;
-  --color-bike-detail-yellow: #FFC500;
 }
 ```
 

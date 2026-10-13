@@ -200,7 +200,7 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 
 - Dựng đủ thứ tự section theo UI-SPEC, ưu tiên mobile trước rồi mở rộng desktop.
 - Hoàn thiện các component: form inline/modal, menu dưới, hỗ trợ Gọi/Zalo, FAQ, chia sẻ tài xế và countdown tám tiếng.
-- Dựng ba thẻ Bike cùng popup chi tiết vàng–xanh; chuyển sang form có lựa chọn sẵn và giữ dữ liệu đang nhập trong bộ nhớ trang.
+- Dựng ba thẻ Bike cùng popup chi tiết màu xanh cyan; chuyển sang form có lựa chọn sẵn và giữ dữ liệu đang nhập trong bộ nhớ trang.
 - Form ở giai đoạn này chỉ là giao diện; chưa được báo “đã đăng ký thành công” khi chưa có backend lưu thật.
 - Nghiệm thu: kiểm tra 360px, 390px và desktop; không tràn ngang hoặc che nội dung; popup giữa màn hình, không chồng modal, bàn phím/focus hoạt động.
 - Mốc xem trước: có trang Bike tương tác được để người dùng xem bố cục thật. Countdown chỉ ở chế độ demo nếu quy tắc vận hành chưa được chốt.
@@ -335,3 +335,4 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 ### Điều chỉnh nội dung popup hình thức Bike — 13/10/2026
 
 - Ba popup dùng cách viết chủ động “chọn” thay cho “trao đổi”. Popup chạy xe công ty nêu rõ tài xế chọn mẫu xe và lịch nhận trong các phương án tại khu vực đăng ký; các cụm “xe được bố trí” và “được tư vấn” đã được bỏ khỏi nội dung popup.
+- Phần đầu ba popup đổi từ gradient vàng–xanh sang nền xanh cyan `#00CED3` đồng nhất; token màu vàng riêng của popup được loại bỏ.
