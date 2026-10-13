@@ -27,7 +27,7 @@ if (!$isCli) {
     }
 
     $configuredSecret = (string) env('CRON_SECRET', '');
-    $providedSecret = (string) ($_SERVER['HTTP_X_CRON_SECRET'] ?? '');
+    $providedSecret = (string) ($_SERVER['HTTP_X_CRON_SECRET'] ?? ($_GET['token'] ?? ''));
     if ($configuredSecret === '' || $providedSecret === '' || !hash_equals($configuredSecret, $providedSecret)) {
         http_response_code(403);
         exit("Forbidden.\n");

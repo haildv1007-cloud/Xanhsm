@@ -35,13 +35,13 @@ Bot Telegram phải được thêm vào group đích và có quyền gửi tin n
 php cron/send-telegram.php
 ```
 
-Hoặc cấu hình cPanel cron gọi endpoint HTTP bằng `curl`:
+Với dịch vụ cron nhận URL, dùng:
 
-```bash
-curl -fsS -H "X-Cron-Secret: YOUR_CRON_SECRET" "https://your-domain.example/cron/send-telegram"
+```text
+https://your-domain.example/cron/send-telegram?token=YOUR_CRON_SECRET
 ```
 
-Thay domain và secret bằng cấu hình thật. Không đưa secret vào query string vì URL có thể được ghi vào access log. Chạy mỗi phút hoặc theo chu kỳ tối thiểu hosting hỗ trợ. Không đặt bot token, group ID, cron secret hoặc khóa mã hóa trong Git.
+Thay domain và secret bằng cấu hình thật. URL cron là bí mật vì token có thể xuất hiện trong lịch sử hoặc log của dịch vụ cron; không chia sẻ URL và đổi `CRON_SECRET` nếu bị lộ. Endpoint vẫn hỗ trợ header `X-Cron-Secret` khi hệ thống cron cho phép. Chạy mỗi phút hoặc theo chu kỳ tối thiểu hosting hỗ trợ. Không đặt bot token, group ID, cron secret hoặc khóa mã hóa trong Git.
 
 Sau khi khởi động server, chạy kiểm tra route/anchor/component và cú pháp JavaScript:
 
