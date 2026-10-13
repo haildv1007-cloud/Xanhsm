@@ -23,16 +23,16 @@ return [
     'documents_title' => 'Giấy tờ đăng ký',
     'documents_intro' => 'Bạn có thể chuẩn bị trước những giấy tờ thường dùng khi đăng ký tài xế Taxi:',
     'documents' => [
-        ['title' => 'CCCD / Hộ chiếu', 'description' => ''],
-        ['title' => 'Bằng lái xe (B/B2)', 'description' => 'Trao đổi cách sử dụng bằng lái trên VNeID khi tư vấn.'],
+        ['title' => 'CCCD / Hộ chiếu', 'description' => 'Có thể sử dụng CCCD hoặc BLX trên VNeID.'],
+        ['title' => 'Bằng lái xe (B/B2)', 'description' => 'Có thể sử dụng CCCD hoặc BLX trên VNeID.'],
         ['title' => 'Lý lịch tư pháp số 2', 'description' => 'Có hỗ trợ tại văn phòng theo hướng dẫn đăng ký.'],
         ['title' => 'Giấy khám sức khỏe người lái xe', 'description' => ''],
     ],
     'steps' => [
-        ['title' => 'Gửi thông tin', 'description' => 'Chọn khu vực và để lại số điện thoại liên hệ.'],
-        ['title' => 'Chọn cách tham gia', 'description' => 'Nắm rõ phương án xe công ty hoặc xe sẵn có cùng cách tính thu nhập tương ứng.'],
-        ['title' => 'Chuẩn bị và làm quen', 'description' => 'Chuẩn bị giấy tờ, làm quen xe điện, ứng dụng và quy cách phục vụ.'],
-        ['title' => 'Bắt đầu nhận chuyến', 'description' => 'Sau khi hoàn tất thủ tục tham gia, kích hoạt ứng dụng và vận doanh.'],
+        ['title' => 'Để lại thông tin', 'description' => 'Điền thông tin liên hệ và khu vực bạn muốn tham gia.'],
+        ['title' => 'Nhận tư vấn', 'description' => 'Trao đổi về công việc, phương tiện và chính sách tại khu vực.'],
+        ['title' => 'Chuẩn bị hồ sơ', 'description' => 'Hoàn thiện giấy tờ theo hướng dẫn dành cho bạn.'],
+        ['title' => 'Bắt đầu hành trình', 'description' => 'Được hướng dẫn các bước tiếp theo và lịch tham gia theo chương trình.'],
     ],
     'stories' => require __DIR__ . '/driver-stories.php',
     'faqs' => [

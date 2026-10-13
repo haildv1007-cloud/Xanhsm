@@ -326,3 +326,8 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 - PHP lint `content/rto.php` và `app/views/components/content-icon.php` PASS; kiểm tra đúng bốn thẻ và thứ tự PASS; `php scripts/check-pages.php http://127.0.0.1:8187` PASS khi cấu hình `APP_URL` cho server local. Chưa kiểm trên production.
 - Phản hồi tiếp theo: thẻ đầu đổi thành “Chạy xe, sở hữu xe điện” và diễn đạt trực tiếp lợi ích tạo thu nhập song song với tiến tới sở hữu xe. Phần giới thiệu, quy trình và FAQ RTO được trả về bản trước commit rà soát nội dung; phần giấy tờ cùng bốn thẻ quyền lợi mới được giữ nguyên.
 - Phần “RTO là gì?” được rút gọn theo thông điệp “thuê xe điện để chạy và từng bước sở hữu chính chiếc xe đang sử dụng”, không dùng cách diễn đạt tập trung vào mua lại xe.
+
+### Điều chỉnh giấy tờ và quy trình Taxi/Van — 13/10/2026
+
+- Hai mục CCCD và bằng lái trên Taxi/Van cùng dùng mô tả “Có thể sử dụng CCCD hoặc BLX trên VNeID.” để người đọc hiểu trực tiếp. Bốn bước đăng ký của hai trang được trả về bản trung tính trước commit rà soát nội dung.
+- Thẻ “Chính sách cho tài xế mới” của Van được thay bằng “Cộng đồng và hỗ trợ”, tập trung vào kết nối, chia sẻ kinh nghiệm và hỗ trợ trong quá trình hoạt động.
