@@ -10,7 +10,7 @@ Trạng thái: tổng hợp các quyết định đã chốt với người dùn
 - Điểm nhấn vàng–xanh chỉ dùng trong popup chi tiết ba hình thức Bike. Không dùng các mảng vàng cho phần lợi ích chung hoặc các thẻ chọn hình thức bên ngoài popup. Giữ màu vốn có của logo/ảnh thương hiệu.
 - Website của đơn vị liên kết tuyển dụng. Không tự xưng chính thức; không thêm cảnh báo phủ định hoặc badge về tư cách đơn vị ở nhiều chỗ.
 - Dùng ngôn ngữ ngắn, trực tiếp; chính sách/thu nhập chỉ nêu khi có thông tin được duyệt, kèm ngữ cảnh “tham khảo”, “tùy khu vực”, “theo điều kiện áp dụng” ở vị trí phù hợp.
-- Không sao chép các cam kết “100%”, thu nhập đảm bảo, miễn phí hoặc ưu đãi trong ảnh tham khảo thành thông tin đã xác thực. Riêng dòng “Nhận Xe Điện Trong Ngày” tại dải đồng hồ là nội dung người dùng yêu cầu trực tiếp cho cả bốn trang; cần xác nhận phạm vi áp dụng thực tế trước khi quảng cáo.
+- Không sao chép các cam kết “100%”, thu nhập đảm bảo hoặc ưu đãi trong ảnh tham khảo thành thông tin đã xác thực. Riêng quyền lợi đồng phục miễn phí và hỗ trợ 24/7 trên RTO cùng dòng “Nhận Xe Điện Trong Ngày” tại dải đồng hồ là nội dung người dùng yêu cầu trực tiếp; cần xác nhận phạm vi áp dụng thực tế trước khi quảng cáo.
 
 ## 2. Trang và thứ tự nội dung
 
@@ -148,7 +148,7 @@ Trang hiện tại chỉ chọn sẵn giá trị khi có ánh xạ rõ ràng; kh
 - Hero dùng bố cục ảnh nền toàn khối và countdown chồng nhẹ theo chuẩn Bike, nhưng dùng nội dung và ảnh riêng của RTO.
 - Phần “RTO là gì?” chỉ giải thích ngắn gọn, kèm đối tượng phù hợp và điểm khác biệt; không có mục “Bắt đầu như thế nào?”.
 - Bỏ section “Trao đổi trước khi tham gia”. Không lặp lại một section chính sách riêng giữa lợi ích và giấy tờ.
-- Điểm nổi bật tập trung vào hướng tới sở hữu phương tiện, không cần có xe sẵn, chủ động công việc và được hướng dẫn từng bước.
+- Section quyền lợi RTO có tiêu đề “Quyền lợi của tài xế” và đúng bốn thẻ theo thứ tự: sở hữu xe điện (mua lại khi đáp ứng chính sách), miễn phí đồng phục và nhận xe điện, hỗ trợ 24/7, hồ sơ nhanh và nhận xe nhanh. Không nêu giá hoặc số tiền trong các thẻ.
 - Hạn chế lặp các cụm “lộ trình”, “trao đổi” và “chương trình áp dụng”; ưu tiên câu ngắn, trực tiếp và dễ hiểu.
 - Bản chỉnh nội dung mới: giải thích RTO bằng cơ chế thuê xe để vận doanh, khoản thuê/cọc/kỳ hạn, cơ hội mua lại sau thời gian thuê hoặc trước hạn theo chính sách. Trình bày như cấu trúc phương án, không đăng mức tiền cố định hoặc hứa chắc quyền sở hữu. Giấy tờ chỉ liệt kê giấy tờ, không chèn “thông tin muốn thuê” vào danh sách giấy tờ.
 

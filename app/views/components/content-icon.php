@@ -10,6 +10,7 @@ function content_icon(string $name): string
         'support' => '<path d="M12 21s8-4 8-11a5 5 0 0 0-9-3 5 5 0 0 0-9 3c0 7 10 11 10 11Zm0-11v6m-3-3h6"/>',
         'chart' => '<path d="M5 20v-6h3v6H5Zm6 0V9h3v11h-3Zm6 0V4h3v16h-3Z"/>',
         'document' => '<path d="M6 3h9l4 4v14H6V3Zm9 0v5h4M9 12h7M9 16h7"/>',
+        'uniform' => '<path d="m8 3-5 3-1 5 4 2 1-2v10h10V11l1 2 4-2-1-5-5-3-4 3-4-3Z"/>',
     ];
 
     return '<svg viewBox="0 0 24 24" aria-hidden="true">' . ($icons[$name] ?? $icons['document']) . '</svg>';

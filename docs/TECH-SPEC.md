@@ -318,3 +318,9 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 
 - Theo yêu cầu trực tiếp mới, Taxi, RTO và Van dùng cùng tiêu đề hai dòng đã có trên Bike: “Đăng Ký Ngay” / “Nhận Xe Điện Trong Ngày”. Bỏ dòng ghi chú hiển thị ở dải đồng hồ của ba trang này; không đổi logic đếm ngược hoặc biểu mẫu.
 - PHP lint ba view PASS; `php scripts/check-pages.php http://127.0.0.1:8080` PASS cho bốn landing, route thành công và 404; `git diff --check` PASS. Cam kết nhận xe trong ngày chưa được xác thực độc lập cho từng trang/khu vực; cần đối chiếu với năng lực tiếp nhận thực tế trước khi quảng cáo.
+
+### Quyền lợi RTO — 13/10/2026
+
+- Section RTO đổi tiêu đề thành “Quyền lợi của tài xế”, gồm bốn thẻ theo thứ tự: sở hữu xe điện khi đáp ứng chính sách mua lại, đồng phục miễn phí và nhận xe điện, hỗ trợ 24/7, hồ sơ gọn và nhận xe nhanh. Không nêu số tiền trong các thẻ. Thêm icon đồng phục vào component icon chung.
+- [Nguồn Green SM về RTO](https://www.greensm.com/vn-vi/news/vao-xanh-tang-xe-cung-chinh-sach-bao-dam-thu-nhap-vo-cung-hap-dan) xác nhận cơ chế mua lại, chương trình đồng phục miễn phí và bước nhận xe sau hồ sơ; hỗ trợ 24/7 là nội dung người dùng trực tiếp yêu cầu theo ảnh tham khảo, chưa xác minh độc lập phạm vi áp dụng. Cần đối chiếu chính sách hiện hành của khu vực trước khi chạy quảng cáo.
+- PHP lint `content/rto.php` và `app/views/components/content-icon.php` PASS; kiểm tra đúng bốn thẻ và thứ tự PASS; `php scripts/check-pages.php http://127.0.0.1:8187` PASS khi cấu hình `APP_URL` cho server local. Chưa kiểm trên production.
