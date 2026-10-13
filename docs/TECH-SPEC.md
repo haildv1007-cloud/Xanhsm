@@ -327,6 +327,7 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 - Phản hồi tiếp theo: thẻ đầu đổi thành “Chạy xe, sở hữu xe điện” và diễn đạt trực tiếp lợi ích tạo thu nhập song song với tiến tới sở hữu xe. Phần giới thiệu, quy trình và FAQ RTO được trả về bản trước commit rà soát nội dung; phần giấy tờ cùng bốn thẻ quyền lợi mới được giữ nguyên.
 - Phần “RTO là gì?” được rút gọn theo thông điệp “thuê xe điện để chạy và từng bước sở hữu chính chiếc xe đang sử dụng”, không dùng cách diễn đạt tập trung vào mua lại xe.
 - Phần điểm khác biệt và FAQ RTO dùng cách viết “Chạy xe công ty sử dụng xe công ty”, loại bỏ từ “bố trí”.
+- Rà soát toàn bộ FAQ: Taxi nói trực tiếp việc sử dụng xe công ty và giấy tờ trên VNeID; RTO nêu cách chọn xe, kỳ hạn và bước sau đăng ký; Bike bỏ các câu vòng qua tư vấn viên. Từ “bố trí” được loại khỏi toàn bộ nội dung xuất bản của bốn trang.
 
 ### Điều chỉnh giấy tờ và quy trình Taxi/Van — 13/10/2026
 

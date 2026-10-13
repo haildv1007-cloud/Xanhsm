@@ -13,7 +13,7 @@ return [
     'hero_alt' => 'Tài xế đứng cạnh ô tô điện Xanh SM Taxi màu cyan trong đô thị',
     'benefits_title' => 'Quyền lợi dành cho tài xế Taxi',
     'benefits' => [
-        ['icon' => 'car', 'title' => 'Lái ô tô điện', 'description' => 'Với hình thức tài xế công ty, xe điện được bố trí để vận doanh; bạn không cần mua ô tô để bắt đầu.'],
+        ['icon' => 'car', 'title' => 'Lái ô tô điện', 'description' => 'Với hình thức tài xế công ty, bạn sử dụng xe điện của công ty để vận doanh và không cần mua ô tô để bắt đầu.'],
         ['icon' => 'chart', 'title' => 'Thu nhập theo chuyến và thưởng', 'description' => 'Hình thức tài xế công ty có lương cứng, chia sẻ doanh số và thưởng theo chính sách đang áp dụng.'],
         ['icon' => 'document', 'title' => 'Hợp đồng và bảo hiểm', 'description' => 'Tài xế công ty ký hợp đồng lao động, tham gia BHXH, BHYT và BHTN theo chế độ áp dụng.'],
         ['icon' => 'calendar', 'title' => 'Có chính sách sạc xe', 'description' => 'Xe điện có chính sách hỗ trợ chi phí sạc và bảo dưỡng; mức hỗ trợ phụ thuộc chương trình hiện hành.'],
@@ -37,8 +37,8 @@ return [
     'stories' => require __DIR__ . '/driver-stories.php',
     'faqs' => [
         ['question' => 'Công việc tài xế Taxi là gì?', 'answer' => 'Bạn lái ô tô điện đưa đón hành khách, nhận chuyến qua ứng dụng và theo dõi kết quả chạy xe để đối soát doanh số.'],
-        ['question' => 'Chưa có ô tô thì bắt đầu thế nào?', 'answer' => 'Bạn có thể chọn hình thức tài xế công ty: xe điện được bố trí để vận doanh, không cần mua ô tô ngay từ đầu.'],
-        ['question' => 'Cần bằng lái và giấy tờ gì?', 'answer' => 'Danh sách tham khảo gồm CCCD hoặc hộ chiếu, bằng lái B/B2, lý lịch tư pháp số 2 và giấy khám sức khỏe người lái xe. Tư vấn viên sẽ hướng dẫn cụ thể, gồm cách sử dụng bằng lái trên VNeID, theo chương trình và khu vực.'],
+        ['question' => 'Chưa có ô tô thì bắt đầu thế nào?', 'answer' => 'Bạn chọn hình thức tài xế công ty để sử dụng xe điện của công ty và không cần mua ô tô ngay từ đầu.'],
+        ['question' => 'Cần bằng lái và giấy tờ gì?', 'answer' => 'Danh sách tham khảo gồm CCCD hoặc hộ chiếu, bằng lái B/B2, lý lịch tư pháp số 2 và giấy khám sức khỏe người lái xe. Có thể sử dụng CCCD hoặc BLX trên VNeID.'],
         ['question' => 'Khu vực của tôi có thể tham gia không?', 'answer' => 'Chọn tỉnh/thành trong biểu mẫu. Khu vực và chương trình đang tiếp nhận sẽ được xác nhận khi liên hệ với bạn.'],
         ['question' => 'Thu nhập và các khoản chi phí ra sao?', 'answer' => 'Với hình thức tài xế công ty, thu nhập gồm lương cứng, phần chia sẻ doanh số và thưởng theo chính sách áp dụng. Xe điện có chính sách sạc và bảo dưỡng riêng; mức cụ thể phụ thuộc khu vực và thời điểm.'],
         ['question' => 'Sau khi đăng ký, khi nào tôi bắt đầu?', 'answer' => 'Bạn bắt đầu nhận chuyến sau khi hoàn tất thủ tục tham gia và làm quen xe, ứng dụng. Lịch cụ thể phụ thuộc phương án và khu vực bạn chọn.'],

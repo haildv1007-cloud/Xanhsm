@@ -158,15 +158,15 @@ return [
     'faqs' => [
         [
             'question' => 'Chưa có xe có thể đăng ký không?',
-            'answer' => 'Bạn có thể chọn “Chạy xe công ty — chưa có xe” hoặc tìm hiểu phương án RTO. Khả năng tiếp nhận phụ thuộc khu vực và chương trình tại thời điểm tư vấn.',
+            'answer' => 'Bạn có thể chọn “Chạy xe công ty — chưa có xe” hoặc phương án RTO. Khả năng tiếp nhận phụ thuộc khu vực và chương trình đang áp dụng.',
         ],
         [
             'question' => 'Đã có xe thì chọn hình thức nào?',
-            'answer' => 'Bạn có thể chọn Platform. Tư vấn viên sẽ hướng dẫn cách tham gia theo loại xe và khu vực đăng ký.',
+            'answer' => 'Bạn chọn Platform, loại xe đang có và khu vực đăng ký để thực hiện các bước tiếp theo.',
         ],
         [
             'question' => 'Cần chuẩn bị những giấy tờ gì?',
-            'answer' => 'Danh sách cơ bản gồm giấy tờ định danh và giấy phép lái xe phù hợp. Tư vấn viên sẽ hướng dẫn phần còn lại khi liên hệ.',
+            'answer' => 'Danh sách cơ bản gồm giấy tờ định danh và giấy phép lái xe phù hợp. Giấy tờ bổ sung phụ thuộc hình thức và khu vực đăng ký.',
         ],
         [
             'question' => 'Thu nhập được tính như thế nào?',

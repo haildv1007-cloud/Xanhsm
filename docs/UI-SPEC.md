@@ -155,6 +155,7 @@ Trang hiện tại chỉ chọn sẵn giá trị khi có ánh xạ rõ ràng; kh
 - Bản chỉnh nội dung mới: giải thích RTO bằng cơ chế thuê xe để vận doanh, khoản thuê/cọc/kỳ hạn, cơ hội mua lại sau thời gian thuê hoặc trước hạn theo chính sách. Trình bày như cấu trúc phương án, không đăng mức tiền cố định hoặc hứa chắc quyền sở hữu. Giấy tờ chỉ liệt kê giấy tờ, không chèn “thông tin muốn thuê” vào danh sách giấy tờ.
 - Theo phản hồi mới nhất, giữ phần giấy tờ đã làm rõ; riêng phần giới thiệu, bốn bước đăng ký và FAQ trở lại nội dung trung tính trước đợt viết chi tiết cơ chế thuê/mua lại.
 - Khi so sánh các hình thức trên trang RTO, dùng câu “Chạy xe công ty sử dụng xe công ty”; không dùng từ “bố trí”.
+- FAQ trên cả bốn trang ưu tiên câu trả lời trực tiếp và chủ động lựa chọn; không dùng “bố trí”, “tư vấn viên”, “được giới thiệu” hoặc “được cung cấp” khi có thể nêu rõ hành động và thông tin ngay tại câu trả lời.
 
 ## 11. Nội dung Van — cập nhật ngày 13/10/2026
 

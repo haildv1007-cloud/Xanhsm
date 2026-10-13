@@ -41,10 +41,10 @@ return [
     'faqs' => [
         ['question' => 'RTO là hình thức gì?', 'answer' => 'RTO là hình thức thuê xe hướng tới sở hữu phương tiện.'],
         ['question' => 'RTO khác chạy xe công ty như thế nào?', 'answer' => 'Chạy xe công ty sử dụng xe công ty. RTO dành cho người muốn thuê xe và hướng tới sở hữu phương tiện.'],
-        ['question' => 'Tôi đã có xe thì có phù hợp với RTO không?', 'answer' => 'Platform là hình thức dành cho người sử dụng xe đang sở hữu. Bạn có thể đăng ký để được hướng dẫn lựa chọn phù hợp.'],
-        ['question' => 'RTO áp dụng cho phương tiện nào?', 'answer' => 'Loại phương tiện sẽ được giới thiệu khi liên hệ. Biểu mẫu không chọn sẵn phương tiện để bạn lựa chọn đúng nhu cầu.'],
-        ['question' => 'Các khoản thuê và kỳ hạn được tính thế nào?', 'answer' => 'Mức thuê và kỳ hạn sẽ được cung cấp khi tư vấn để bạn cân nhắc trước khi tham gia.'],
-        ['question' => 'Sau khi đăng ký tôi cần làm gì?', 'answer' => 'Bạn sẽ được liên hệ và hướng dẫn giấy tờ cùng các bước tiếp theo.'],
+        ['question' => 'Tôi đã có xe thì có phù hợp với RTO không?', 'answer' => 'Nếu muốn sử dụng xe đang sở hữu, bạn chọn Platform. RTO phù hợp với người chưa có xe và muốn hướng tới sở hữu phương tiện.'],
+        ['question' => 'RTO áp dụng cho phương tiện nào?', 'answer' => 'Bạn chọn phương tiện phù hợp với nhu cầu trong biểu mẫu đăng ký. Các mẫu xe hiện có phụ thuộc khu vực và chương trình.'],
+        ['question' => 'Các khoản thuê và kỳ hạn được tính thế nào?', 'answer' => 'Mức thuê và kỳ hạn phụ thuộc mẫu xe cùng phương án bạn lựa chọn. Thông tin cụ thể được trình bày trước khi bạn hoàn tất đăng ký.'],
+        ['question' => 'Sau khi đăng ký tôi cần làm gì?', 'answer' => 'Chuẩn bị giấy tờ theo danh sách và hoàn tất các bước nhận xe theo lịch đã chọn.'],
     ],
     'seo' => [
         'title' => 'Đăng ký RTO | Thuê xe hướng tới sở hữu',
