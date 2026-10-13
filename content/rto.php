@@ -13,7 +13,7 @@ return [
     'hero_alt' => 'Tài xế Xanh SM đứng cạnh xe máy điện màu cyan và cầm chìa khóa',
     'intro' => [
         'title' => 'RTO là gì?',
-        'description' => 'RTO là phương án thuê xe hướng tới sở hữu phương tiện.',
+        'description' => 'RTO là hình thức thuê xe điện để chạy và từng bước sở hữu chính chiếc xe đang sử dụng.',
         'audience' => 'Phù hợp với người chưa có phương tiện và muốn có xe để chủ động công việc lâu dài.',
         'difference' => 'Chạy xe công ty sử dụng xe được bố trí. Platform dành cho người đã có xe. RTO dành cho người chưa có xe và muốn hướng tới sở hữu phương tiện.',
     ],

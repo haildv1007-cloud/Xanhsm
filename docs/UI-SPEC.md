@@ -146,7 +146,7 @@ Trang hiện tại chỉ chọn sẵn giá trị khi có ánh xạ rõ ràng; kh
 ## 10. Trang RTO — chốt ngày 13/10/2026
 
 - Hero dùng bố cục ảnh nền toàn khối và countdown chồng nhẹ theo chuẩn Bike, nhưng dùng nội dung và ảnh riêng của RTO.
-- Phần “RTO là gì?” chỉ giải thích ngắn gọn, kèm đối tượng phù hợp và điểm khác biệt; không có mục “Bắt đầu như thế nào?”.
+- Phần “RTO là gì?” chỉ giải thích ngắn gọn theo mạch thuê xe điện → chạy xe → từng bước sở hữu chính xe đang sử dụng; không nhấn vào hành vi mua xe. Phần này vẫn kèm đối tượng phù hợp và điểm khác biệt, không có mục “Bắt đầu như thế nào?”.
 - Bỏ section “Trao đổi trước khi tham gia”. Không lặp lại một section chính sách riêng giữa lợi ích và giấy tờ.
 - Section quyền lợi RTO có tiêu đề “Quyền lợi của tài xế” và đúng bốn thẻ theo thứ tự: chạy xe và tiến tới sở hữu chính xe điện đang sử dụng, miễn phí đồng phục và nhận xe điện, hỗ trợ 24/7, hồ sơ nhanh và nhận xe nhanh. Thẻ đầu nhấn mạnh tính sở hữu, không mở đầu bằng nội dung thuê xe; không nêu giá hoặc số tiền trong các thẻ.
 - Hạn chế lặp các cụm “lộ trình”, “trao đổi” và “chương trình áp dụng”; ưu tiên câu ngắn, trực tiếp và dễ hiểu.
