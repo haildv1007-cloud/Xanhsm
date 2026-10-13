@@ -97,6 +97,7 @@ Trang hiện tại chỉ chọn sẵn giá trị khi có ánh xạ rõ ràng; kh
 - Chính sách bảo mật và điều khoản sử dụng dùng một popup chung trên cả bốn trang. Nội dung cuộn độc lập; nút “Đã hiểu” luôn nằm cố định ở đáy popup.
 - Có nền mờ, nút đóng rõ, giới hạn chiều cao theo màn hình, cuộn bên trong khi cần.
 - Nút đóng popup trên mobile dùng vòng tròn gọn, không có vòng focus kép nhô lớn; trạng thái focus vẫn hiển thị bên trong nút.
+- Popup dùng kích thước theo viewport thực, không tràn hoặc lệch khỏi màn hình trên Safari iOS, Chrome Android và trình duyệt nhúng trong ứng dụng; tắt cơ chế tự phóng chữ làm sai bố cục.
 - Khóa cuộn nền; quản lý focus, phím Escape và trả focus về nút mở. Khi bàn phím mobile mở, ô đang nhập và nút gửi vẫn tiếp cận được.
 - Mobile có thanh menu cố định dưới cùng, đúng thứ tự: **Bike | Taxi | Đăng ký | RTO | Van**.
 - Thanh menu dưới dùng chiều cao gọn, icon và nhãn sát nhau; vẫn giữ vùng chạm tối thiểu dễ thao tác và phần safe area của thiết bị.

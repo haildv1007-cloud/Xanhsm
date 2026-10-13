@@ -84,6 +84,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--header-height) + 1rem);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -1110,8 +1112,11 @@ select:focus-visible {
 }
 
 .modal {
-    width: min(calc(100% - 2rem), 42.5rem);
-    max-height: 88dvh;
+    width: calc(100vw - 2rem);
+    max-width: 42.5rem;
+    max-height: calc(100vh - 2rem);
+    max-height: calc(100dvh - 2rem);
+    inset: 0;
     margin: auto;
     padding: 0;
     overflow: hidden;
@@ -1147,16 +1152,41 @@ select:focus-visible {
 }
 
 .modal__close {
+    position: relative;
     flex: 0 0 auto;
     display: grid;
     width: 2.75rem;
     height: 2.75rem;
+    padding: 0;
     place-items: center;
     color: var(--color-ink);
     background: var(--color-white);
     border: 1px solid rgba(38, 56, 58, 0.15);
     border-radius: 50%;
-    font-size: 1.5rem;
+    box-shadow: none;
+    font-size: 0;
+    line-height: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.modal__close::before,
+.modal__close::after {
+    position: absolute;
+    width: 1rem;
+    height: 2px;
+    background: currentColor;
+    border-radius: 999px;
+    content: "";
+}
+
+.modal__close::before {
+    transform: rotate(45deg);
+}
+
+.modal__close::after {
+    transform: rotate(-45deg);
 }
 
 .modal__close:focus-visible {
@@ -1165,10 +1195,15 @@ select:focus-visible {
 }
 
 @media (max-width: 767px) {
+    .modal {
+        width: calc(100vw - 1.5rem);
+        max-width: calc(100vw - 1.5rem);
+        border-radius: 1.25rem;
+    }
+
     .modal__close {
-        border-width: 1px;
-        font-size: 1.25rem;
-        -webkit-tap-highlight-color: transparent;
+        width: 2.75rem;
+        height: 2.75rem;
     }
 }
 
@@ -1932,7 +1967,7 @@ select:focus-visible {
 }
 
 .legal-modal {
-    width: min(calc(100% - 2rem), 43rem);
+    max-width: 43rem;
     height: min(88dvh, 48rem);
     max-height: 88dvh;
 }
@@ -2055,8 +2090,12 @@ select:focus-visible {
 }
 
 .story-modal {
-    width: min(calc(100% - 1rem), 78rem);
-    max-height: 94dvh;
+    width: calc(100vw - 1rem);
+    max-width: 78rem;
+    max-height: calc(100vh - 1rem);
+    max-height: calc(100dvh - 1rem);
+    inset: 0;
+    margin: auto;
     padding: 0;
     overflow: visible;
     background: transparent;
@@ -2088,6 +2127,10 @@ select:focus-visible {
     border: 3px solid var(--color-white);
     border-radius: 50%;
     font-size: 1.5rem;
+    line-height: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .site-footer {
@@ -2314,7 +2357,7 @@ select:focus-visible {
     max-height: none;
 }
 .success-modal {
-    width: min(calc(100% - 2rem), 32rem);
+    max-width: 32rem;
 }
 .success-modal__header {
     align-items: center;
