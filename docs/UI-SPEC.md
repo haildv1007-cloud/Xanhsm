@@ -10,7 +10,7 @@ Trạng thái: tổng hợp các quyết định đã chốt với người dùn
 - Điểm nhấn vàng–xanh chỉ dùng trong popup chi tiết ba hình thức Bike. Không dùng các mảng vàng cho phần lợi ích chung hoặc các thẻ chọn hình thức bên ngoài popup. Giữ màu vốn có của logo/ảnh thương hiệu.
 - Website của đơn vị liên kết tuyển dụng. Không tự xưng chính thức; không thêm cảnh báo phủ định hoặc badge về tư cách đơn vị ở nhiều chỗ.
 - Dùng ngôn ngữ ngắn, trực tiếp; chính sách/thu nhập chỉ nêu khi có thông tin được duyệt, kèm ngữ cảnh “tham khảo”, “tùy khu vực”, “theo điều kiện áp dụng” ở vị trí phù hợp.
-- Không sao chép các cam kết “100%”, nhận xe trong ngày, thu nhập đảm bảo, miễn phí hoặc ưu đãi trong ảnh tham khảo thành thông tin đã xác thực.
+- Không sao chép các cam kết “100%”, thu nhập đảm bảo, miễn phí hoặc ưu đãi trong ảnh tham khảo thành thông tin đã xác thực. Riêng dòng “Nhận Xe Điện Trong Ngày” tại dải đồng hồ là nội dung người dùng yêu cầu trực tiếp cho cả bốn trang; cần xác nhận phạm vi áp dụng thực tế trước khi quảng cáo.
 
 ## 2. Trang và thứ tự nội dung
 
@@ -111,6 +111,7 @@ Trang hiện tại chỉ chọn sẵn giá trị khi có ánh xạ rõ ràng; kh
 ## 7. Countdown, chia sẻ và footer
 
 - Countdown có thời lượng tám tiếng (`28800` giây), dạng `08:00:00`, cấu hình bật/tắt.
+- Tiêu đề dải đồng hồ trên cả bốn trang: dòng 1 “Đăng Ký Ngay”, dòng 2 in đậm “Nhận Xe Điện Trong Ngày”.
 - Cách tính mốc bắt đầu và hành vi hết giờ chưa chốt. Không tự gắn với hạn ưu đãi, không tự reset mỗi lần tải lại trang. Phần demo phải tách khỏi nội dung được phép xuất bản.
 - Chia sẻ tài xế: đúng ba ảnh gồm chia sẻ và ảnh thu nhập. Mobile xếp ba ảnh từ trên xuống dưới, không tự chuyển; desktop dùng carousel một ảnh mỗi lượt, tự chuyển sau 7 giây. Bấm ảnh để xem lớn.
 - Ảnh và lời chia sẻ trong concept là minh họa. Chỉ xuất bản tên, ảnh, số thu nhập và lời chứng thực thật khi có nội dung được phép sử dụng; không tự tạo đánh giá/số lượng tài xế như bằng chứng thật.
@@ -136,7 +137,7 @@ Trang hiện tại chỉ chọn sẵn giá trị khi có ánh xạ rõ ràng; kh
 - Hero phải cùng kiểu Bike theo chỉnh sửa mới nhất: ảnh phủ toàn bộ nền hero, lớp phủ sáng để đọc chữ, hai nút “Đăng ký tư vấn” và “Xem quyền lợi” trên ảnh; countdown chồng nhẹ lên mép dưới. Không dùng bố cục chữ và ảnh tách thành hai khối hoặc ảnh bo góc riêng.
 - Theo yêu cầu mới nhất, phần chia sẻ dùng đúng ba ảnh hiện có của Bike, cùng nguồn dữ liệu `content/driver-stories.php` và component chung; không thêm lời chứng thực hoặc con số mới.
 - Không có ba thẻ hình thức và popup chi tiết riêng của Bike. Nội dung chưa được cung cấp dùng lời tư vấn trung tính, không tự liệt kê hạng bằng lái, hồ sơ bắt buộc, tiền cọc, thu nhập hoặc lịch nhận xe.
-- Người dùng đã bổ sung ảnh tham khảo quyền lợi/giấy tờ Taxi: chủ động thời gian, đối soát doanh thu, lương cứng/bảo hiểm, cộng đồng, vận hành điện, hướng dẫn ứng dụng và kỹ thuật; giấy tờ gồm CCCD/hộ chiếu, bằng B/B2 (trao đổi cách dùng trên VNeID), lý lịch tư pháp số 2, giấy khám sức khỏe người lái xe. Dùng nội dung này ở mức tham khảo, có ngữ cảnh theo chương trình/khu vực; không đưa cam kết nhận xe trong ngày, miễn phí hoặc hỗ trợ 24/7 thành lời hứa cố định.
+- Người dùng đã bổ sung ảnh tham khảo quyền lợi/giấy tờ Taxi: chủ động thời gian, đối soát doanh thu, lương cứng/bảo hiểm, cộng đồng, vận hành điện, hướng dẫn ứng dụng và kỹ thuật; giấy tờ gồm CCCD/hộ chiếu, bằng B/B2 (trao đổi cách dùng trên VNeID), lý lịch tư pháp số 2, giấy khám sức khỏe người lái xe. Dùng nội dung này ở mức tham khảo, có ngữ cảnh theo chương trình/khu vực; không đưa các cam kết miễn phí hoặc hỗ trợ 24/7 thành lời hứa cố định. Dòng nhận xe trong ngày ở dải đồng hồ theo yêu cầu trực tiếp mới nhất.
 - Bản chỉnh nội dung mới: quyền lợi Taxi phải nêu rõ cơ chế của hình thức tài xế công ty (xe được bố trí, lương cứng + doanh số/thưởng, hợp đồng và bảo hiểm), cách theo dõi kết quả vận doanh và bước làm quen xe/ứng dụng. Nêu phạm vi “tài xế công ty” ngay tại thẻ tương ứng, không làm người đọc hiểu đây là quyền lợi chung cho mọi hình thức. Quy trình đi từ gửi thông tin đến bắt đầu nhận chuyến; hạn chế các câu chỉ hẹn tư vấn.
 - Tiêu đề popup dùng chung phải là “Đăng ký nhận tư vấn”. Chỉ chọn sẵn phương tiện/hình thức theo ánh xạ cấu hình đã có. Taxi hiện để trống hai lựa chọn này.
 - Form inline/modal đồng bộ trong bộ nhớ trang, gồm tùy chọn Zalo cùng số điện thoại; không lưu dữ liệu hồ sơ vào localStorage hoặc URL. Khi backend được cấu hình, form gửi đến endpoint chung và chỉ báo thành công sau khi hồ sơ cùng job thông báo đã được commit.

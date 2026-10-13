@@ -21,10 +21,7 @@ declare(strict_types=1);
 <?php if (($site['features']['countdown'] ?? false) && ($site['features']['countdown_mode'] ?? '') === 'session_preview'): ?>
 <section class="countdown-strip" aria-labelledby="countdown-title">
     <div class="container countdown-strip__inner">
-        <div>
-            <h2 id="countdown-title">Đăng ký nhận tư vấn</h2>
-            <p class="countdown-note">Đồng hồ minh họa · Không phải hạn ưu đãi</p>
-        </div>
+        <h2 id="countdown-title">Đăng Ký Ngay<br><strong>Nhận Xe Điện Trong Ngày</strong></h2>
         <div class="countdown" data-countdown data-storage-key="xanhsm-taxi-countdown-target" data-duration="<?= e((string) $site['features']['countdown_seconds']) ?>" aria-label="Đồng hồ đếm ngược minh họa tám giờ">
             <div><strong data-hours>08</strong><span>Giờ</span></div><b aria-hidden="true">:</b>
             <div><strong data-minutes>00</strong><span>Phút</span></div><b aria-hidden="true">:</b>
