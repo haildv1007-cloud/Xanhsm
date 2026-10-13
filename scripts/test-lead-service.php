@@ -126,11 +126,13 @@ $message = TelegramMessageFormatter::build([
     'source_page' => 'bike',
     'source_url' => 'https://example.test/?gclid=test&campaign=sample',
 ], $config, '000000000000');
-assertTrue(str_starts_with($message, 'Thông báo dữ liệu từ Xanh'), 'thông báo Telegram có đúng tiêu đề');
-assertTrue(str_contains($message, 'Khu Vực : Đồng Nai'), 'thông báo Telegram hiển thị nhãn khu vực');
-assertTrue(str_contains($message, 'Bạn Đã Có Xe Vinfast? : Chưa Có ( Chạy Xe Công Ty )'), 'thông báo Telegram ánh xạ loại hình theo mẫu');
-assertTrue(str_contains($message, 'Phương Tiện : Xe Máy ( Xanh Bike )'), 'thông báo Telegram ánh xạ phương tiện theo mẫu');
-assertTrue(str_contains($message, 'Số CCCD Của Bạn : 000000000000'), 'thông báo Telegram có trường CCCD theo mẫu');
-assertTrue(str_contains($message, 'Nguồn từ: https://example.test/?gclid=test&amp;campaign=sample'), 'nguồn đăng ký được escape an toàn cho Telegram HTML');
+assertTrue(str_starts_with($message, '<b>Thông báo dữ liệu từ Xanh</b>'), 'thông báo Telegram có tiêu đề nổi bật');
+assertTrue(str_contains($message, 'Họ tên: <code>Người Kiểm Thử</code>'), 'họ tên có thể sao chép riêng');
+assertTrue(str_contains($message, 'Số điện thoại: <code>0900000000</code>'), 'số điện thoại có thể sao chép riêng');
+assertTrue(str_contains($message, 'Khu vực: <code>Đồng Nai</code>'), 'khu vực có thể sao chép riêng');
+assertTrue(str_contains($message, 'Hình thức: <code>Chưa Có ( Chạy Xe Công Ty )</code>'), 'thông báo Telegram ánh xạ loại hình theo mẫu');
+assertTrue(str_contains($message, 'Phương tiện: <code>Xe Máy ( Xanh Bike )</code>'), 'thông báo Telegram ánh xạ phương tiện theo mẫu');
+assertTrue(str_contains($message, 'Số CCCD: <code>000000000000</code>'), 'CCCD có thể sao chép riêng');
+assertTrue(str_contains($message, 'Nguồn từ: <code>https://example.test/?gclid=test&amp;campaign=sample</code>'), 'nguồn đăng ký được escape an toàn cho Telegram HTML');
 
 fwrite(STDOUT, "Lead service tests completed.\n");
