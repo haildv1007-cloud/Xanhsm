@@ -15,7 +15,7 @@ return [
         'title' => 'RTO là gì?',
         'description' => 'RTO là hình thức thuê xe điện để chạy và từng bước sở hữu chính chiếc xe đang sử dụng.',
         'audience' => 'Phù hợp với người chưa có phương tiện và muốn có xe để chủ động công việc lâu dài.',
-        'difference' => 'Chạy xe công ty sử dụng xe được bố trí. Platform dành cho người đã có xe. RTO dành cho người chưa có xe và muốn hướng tới sở hữu phương tiện.',
+        'difference' => 'Chạy xe công ty sử dụng xe công ty. Platform dành cho người đã có xe. RTO dành cho người chưa có xe và muốn hướng tới sở hữu phương tiện.',
     ],
     'benefits_title' => 'Quyền lợi của tài xế',
     'benefits' => [
@@ -40,7 +40,7 @@ return [
     'stories_note' => 'Những chia sẻ thực tế giúp bạn hình dung thêm về hành trình làm tài xế.',
     'faqs' => [
         ['question' => 'RTO là hình thức gì?', 'answer' => 'RTO là hình thức thuê xe hướng tới sở hữu phương tiện.'],
-        ['question' => 'RTO khác chạy xe công ty như thế nào?', 'answer' => 'Chạy xe công ty sử dụng xe được bố trí. RTO dành cho người muốn thuê xe và hướng tới sở hữu phương tiện.'],
+        ['question' => 'RTO khác chạy xe công ty như thế nào?', 'answer' => 'Chạy xe công ty sử dụng xe công ty. RTO dành cho người muốn thuê xe và hướng tới sở hữu phương tiện.'],
         ['question' => 'Tôi đã có xe thì có phù hợp với RTO không?', 'answer' => 'Platform là hình thức dành cho người sử dụng xe đang sở hữu. Bạn có thể đăng ký để được hướng dẫn lựa chọn phù hợp.'],
         ['question' => 'RTO áp dụng cho phương tiện nào?', 'answer' => 'Loại phương tiện sẽ được giới thiệu khi liên hệ. Biểu mẫu không chọn sẵn phương tiện để bạn lựa chọn đúng nhu cầu.'],
         ['question' => 'Các khoản thuê và kỳ hạn được tính thế nào?', 'answer' => 'Mức thuê và kỳ hạn sẽ được cung cấp khi tư vấn để bạn cân nhắc trước khi tham gia.'],
