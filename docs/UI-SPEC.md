@@ -59,6 +59,7 @@ Không thay phần lợi ích bằng danh sách liên kết sang trang khác. Gi
 - Bấm mở popup giữa màn hình, không chuyển trang.
 - Bên trong popup mới dùng điểm nhấn vàng–xanh; làm rõ bản chất loại hình, điểm khác biệt và có ba tab Chính sách – Quy trình – Hỏi đáp. Nội dung tiền bạc chỉ nêu khái quát, không biến thành cam kết.
 - Nút “Đăng ký hình thức này” đóng popup chi tiết rồi mở form chung, chọn sẵn hình thức và giữ dữ liệu đã nhập. Không xếp chồng hai modal.
+- Nội dung ba popup dùng từ “chọn” cho các quyết định của tài xế. Với hình thức chạy xe công ty, tài xế chọn mẫu xe và lịch nhận xe trong các phương án tại khu vực đăng ký; không dùng cách diễn đạt “xe được bố trí”, “trao đổi” hoặc “được tư vấn” khiến người đọc hiểu rằng họ không được lựa chọn.
 
 ## 5. Form dùng chung
 

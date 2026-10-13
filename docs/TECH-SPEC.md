@@ -331,3 +331,7 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 
 - Hai mục CCCD và bằng lái trên Taxi/Van cùng dùng mô tả “Có thể sử dụng CCCD hoặc BLX trên VNeID.” để người đọc hiểu trực tiếp. Bốn bước đăng ký của hai trang được trả về bản trung tính trước commit rà soát nội dung.
 - Thẻ “Chính sách cho tài xế mới” của Van được thay bằng “Cộng đồng và hỗ trợ”, tập trung vào kết nối, chia sẻ kinh nghiệm và hỗ trợ trong quá trình hoạt động.
+
+### Điều chỉnh nội dung popup hình thức Bike — 13/10/2026
+
+- Ba popup dùng cách viết chủ động “chọn” thay cho “trao đổi”. Popup chạy xe công ty nêu rõ tài xế chọn mẫu xe và lịch nhận trong các phương án tại khu vực đăng ký; các cụm “xe được bố trí” và “được tư vấn” đã được bỏ khỏi nội dung popup.
