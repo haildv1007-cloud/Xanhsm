@@ -64,7 +64,7 @@ Không thay phần lợi ích bằng danh sách liên kết sang trang khác. Gi
 
 Cả form trực tiếp và form popup trên bốn trang dùng cùng định nghĩa, kiểm tra dữ liệu và endpoint.
 
-- Input và select có cùng chiều cao, khoảng đệm và bề rộng trên mobile lẫn desktop. Select dùng phần điều khiển gọn, mũi tên riêng và vùng chạm rõ; danh sách lựa chọn vẫn dùng bộ chọn gốc của thiết bị để nhẹ, dễ thao tác và ổn định trên Safari iOS, Chrome Android và trình duyệt nhúng.
+- Input và select có cùng chiều cao, khoảng đệm và bề rộng trên mobile lẫn desktop. Select dùng dropdown tùy biến nhẹ bằng CSS/JavaScript thuần: mũi tên riêng, danh sách bo góc, mục đang chọn nổi bật, giới hạn chiều cao và cuộn bên trong; hỗ trợ chuột, cảm ứng và bàn phím. Thẻ select gốc vẫn giữ trong form để submit và xác thực dữ liệu.
 
 | Trường | Cách trình bày |
 | --- | --- |

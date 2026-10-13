@@ -18,6 +18,123 @@ const successPath = successModal?.dataset.successPath || '/dang-ky-thanh-cong';
 let successReturnUrl = '';
 let closingSuccessFromHistory = false;
 
+const customSelects = new Map();
+
+function closeCustomSelect(select, returnFocus = false) {
+    const custom = customSelects.get(select);
+    if (!custom) return;
+    custom.trigger.setAttribute('aria-expanded', 'false');
+    custom.panel.hidden = true;
+    custom.root.classList.remove('is-open');
+    if (returnFocus) custom.trigger.focus();
+}
+
+function refreshCustomSelect(select) {
+    const custom = customSelects.get(select);
+    if (!custom) return;
+    const selected = select.options[select.selectedIndex] || select.options[0];
+    custom.value.textContent = selected?.textContent || '';
+    custom.trigger.setAttribute('aria-label', `${custom.label}: ${selected?.textContent || ''}`);
+    custom.options.forEach((option, index) => {
+        const active = index === select.selectedIndex;
+        option.setAttribute('aria-selected', String(active));
+        option.classList.toggle('is-selected', active);
+    });
+}
+
+function refreshCustomSelects() {
+    customSelects.forEach((_, select) => refreshCustomSelect(select));
+}
+
+document.querySelectorAll('.field select').forEach((select, selectIndex) => {
+    const root = document.createElement('div');
+    const trigger = document.createElement('button');
+    const value = document.createElement('span');
+    const panel = document.createElement('ul');
+    const panelId = `custom-select-${selectIndex}`;
+
+    root.className = 'custom-select';
+    trigger.className = 'custom-select__trigger';
+    trigger.type = 'button';
+    trigger.setAttribute('aria-haspopup', 'listbox');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-controls', panelId);
+    const label = select.labels?.[0]?.textContent?.trim() || 'Chọn một giá trị';
+    trigger.setAttribute('aria-label', label);
+    value.className = 'custom-select__value';
+    panel.className = 'custom-select__panel';
+    panel.id = panelId;
+    panel.role = 'listbox';
+    panel.hidden = true;
+
+    const options = [...select.options].map((nativeOption, optionIndex) => {
+        const option = document.createElement('li');
+        option.className = 'custom-select__option';
+        option.role = 'option';
+        option.tabIndex = -1;
+        option.dataset.index = String(optionIndex);
+        option.textContent = nativeOption.textContent;
+        option.addEventListener('click', () => {
+            select.selectedIndex = optionIndex;
+            select.dispatchEvent(new Event('change', { bubbles: true }));
+            refreshCustomSelect(select);
+            closeCustomSelect(select, true);
+        });
+        panel.append(option);
+        return option;
+    });
+
+    trigger.append(value);
+    root.append(trigger, panel);
+    select.classList.add('custom-select__native');
+    select.tabIndex = -1;
+    select.setAttribute('aria-hidden', 'true');
+    select.after(root);
+    customSelects.set(select, { root, trigger, value, panel, options, label });
+    refreshCustomSelect(select);
+
+    trigger.addEventListener('click', () => {
+        const willOpen = panel.hidden;
+        customSelects.forEach((_, other) => closeCustomSelect(other));
+        if (!willOpen) return;
+        panel.hidden = false;
+        root.classList.add('is-open');
+        trigger.setAttribute('aria-expanded', 'true');
+        (options[select.selectedIndex] || options[0])?.focus();
+    });
+
+    trigger.addEventListener('keydown', (event) => {
+        if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        if (panel.hidden) trigger.click();
+    });
+
+    panel.addEventListener('keydown', (event) => {
+        const current = options.indexOf(document.activeElement);
+        let next = current;
+        if (event.key === 'ArrowDown') next = Math.min(options.length - 1, current + 1);
+        else if (event.key === 'ArrowUp') next = Math.max(0, current - 1);
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = options.length - 1;
+        else if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            document.activeElement?.click();
+            return;
+        } else if (event.key === 'Escape' || event.key === 'Tab') {
+            closeCustomSelect(select, event.key === 'Escape');
+            return;
+        } else return;
+        event.preventDefault();
+        options[next]?.focus();
+    });
+});
+
+document.addEventListener('pointerdown', (event) => {
+    customSelects.forEach((custom, select) => {
+        if (!custom.root.contains(event.target)) closeCustomSelect(select);
+    });
+});
+
 function openDialog(dialog, opener = document.activeElement) {
     if (!dialog) return;
     if (dialog.open) return;
@@ -81,6 +198,7 @@ function syncRegistrationForms(sourceForm = null) {
         target.querySelector('[data-zalo-same-phone]').checked = Boolean(samePhone?.checked);
         target.elements.namedItem('zalo').readOnly = Boolean(samePhone?.checked);
     });
+    refreshCustomSelects();
 }
 
 document.querySelectorAll('[data-open-registration]').forEach((trigger) => {
@@ -192,7 +310,16 @@ registrationForms.forEach((form) => {
             if (error) error.textContent = '';
         }
     });
-    form.addEventListener('change', () => syncRegistrationForms(form));
+    form.addEventListener('change', (event) => {
+        const field = event.target;
+        if (field?.name) {
+            field.removeAttribute('aria-invalid');
+            customSelects.get(field)?.trigger.removeAttribute('aria-invalid');
+            const error = form.querySelector(`[data-field-error="${CSS.escape(field.name)}"]`);
+            if (error) error.textContent = '';
+        }
+        syncRegistrationForms(form);
+    });
 
     const samePhone = form.querySelector('[data-zalo-same-phone]');
     const phone = form.elements.namedItem('phone');
@@ -214,6 +341,16 @@ registrationForms.forEach((form) => {
 
         form.querySelectorAll('[data-field-error]').forEach((error) => { error.textContent = ''; });
         form.querySelectorAll('[aria-invalid="true"]').forEach((field) => field.removeAttribute('aria-invalid'));
+        const invalidSelect = [...form.querySelectorAll('select[required]')].find((select) => !select.value);
+        if (invalidSelect) {
+            const custom = customSelects.get(invalidSelect);
+            const error = form.querySelector(`[data-field-error="${CSS.escape(invalidSelect.name)}"]`);
+            invalidSelect.setAttribute('aria-invalid', 'true');
+            custom?.trigger.setAttribute('aria-invalid', 'true');
+            if (error) error.textContent = 'Vui lòng chọn thông tin.';
+            custom?.trigger.focus();
+            return;
+        }
         if (!form.reportValidity()) return;
 
         submit.disabled = true;
@@ -235,6 +372,7 @@ registrationForms.forEach((form) => {
                     const field = form.elements.namedItem(name);
                     const error = form.querySelector(`[data-field-error="${CSS.escape(name)}"]`);
                     field?.setAttribute('aria-invalid', 'true');
+                    customSelects.get(field)?.trigger.setAttribute('aria-invalid', 'true');
                     if (error) error.textContent = message;
                 });
                 throw new Error(result.message || 'Không thể gửi thông tin lúc này. Vui lòng thử lại.');
@@ -405,6 +543,7 @@ document.querySelector('[data-select-participation]')?.addEventListener('click',
     document.querySelectorAll('[data-cooperation-select]').forEach((select) => {
         select.value = selectedParticipation;
     });
+    refreshCustomSelects();
     openDialog(registrationModal, dialogOpeners.get(participationModal));
 });
 
