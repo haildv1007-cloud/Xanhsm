@@ -336,3 +336,4 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 
 - Ba popup dùng cách viết chủ động “chọn” thay cho “trao đổi”. Popup chạy xe công ty nêu rõ tài xế chọn mẫu xe và lịch nhận trong các phương án tại khu vực đăng ký; các cụm “xe được bố trí” và “được tư vấn” đã được bỏ khỏi nội dung popup.
 - Phần đầu ba popup đổi từ gradient vàng–xanh sang nền xanh cyan `#00CED3` đồng nhất; token màu vàng riêng của popup được loại bỏ.
+- Eyebrow “Chi tiết hình thức” và tiêu đề hình thức trong phần đầu popup dùng chữ trắng theo phản hồi giao diện.

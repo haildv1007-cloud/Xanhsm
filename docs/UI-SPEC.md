@@ -7,7 +7,7 @@ Trạng thái: tổng hợp các quyết định đã chốt với người dùn
 - Phong cách Xanh SM: trắng, dải xanh cyan sáng, chữ trung tính dễ đọc; bố cục thoáng, rõ và dễ đọc trên điện thoại.
 - Dải màu thương hiệu chính đã chốt: `#FFFFFF`, `#E6FAFB`, `#85E9EB`, `#00CED3`. `#00CED3` là màu mạnh nhất; không dùng `#063F43`. Phân vai màu, typography, kích thước và quy tắc component nằm trong `FRONTEND-GUIDE.md`.
 - CTA và điểm nhấn mạnh dùng nền `#00CED3`, chữ trắng. Nội dung thường dùng màu trung tính theo `FRONTEND-GUIDE.md`.
-- Popup chi tiết ba hình thức Bike dùng nền xanh cyan đồng nhất ở phần đầu, không dùng gradient hoặc mảng vàng. Giữ màu vốn có của logo/ảnh thương hiệu.
+- Popup chi tiết ba hình thức Bike dùng nền xanh cyan đồng nhất và chữ trắng ở phần đầu, không dùng gradient hoặc mảng vàng. Giữ màu vốn có của logo/ảnh thương hiệu.
 - Website của đơn vị liên kết tuyển dụng. Không tự xưng chính thức; không thêm cảnh báo phủ định hoặc badge về tư cách đơn vị ở nhiều chỗ.
 - Dùng ngôn ngữ ngắn, trực tiếp; chính sách/thu nhập chỉ nêu khi có thông tin được duyệt, kèm ngữ cảnh “tham khảo”, “tùy khu vực”, “theo điều kiện áp dụng” ở vị trí phù hợp.
 - Không sao chép các cam kết “100%”, thu nhập đảm bảo hoặc ưu đãi trong ảnh tham khảo thành thông tin đã xác thực. Riêng quyền lợi đồng phục miễn phí và hỗ trợ 24/7 trên RTO cùng dòng “Nhận Xe Điện Trong Ngày” tại dải đồng hồ là nội dung người dùng yêu cầu trực tiếp; cần xác nhận phạm vi áp dụng thực tế trước khi quảng cáo.

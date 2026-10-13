@@ -38,7 +38,7 @@ Không dùng `#063F43`. Tiêu đề và nội dung dùng xám xanh trung tính �
 
 ### Popup chi tiết Bike
 
-Phần đầu popup chi tiết ba hình thức Bike dùng nền `#00CED3` đồng nhất theo `UI-SPEC.md`. Không dùng gradient hoặc mảng vàng.
+Phần đầu popup chi tiết ba hình thức Bike dùng nền `#00CED3` đồng nhất và chữ trắng theo `UI-SPEC.md`. Không dùng gradient hoặc mảng vàng.
 
 ### Tỷ lệ sử dụng gợi ý
 

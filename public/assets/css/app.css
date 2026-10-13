@@ -1278,6 +1278,11 @@ select:focus-visible {
     background: var(--color-aqua);
 }
 
+.modal__header--bike-detail .eyebrow,
+.modal__header--bike-detail h2 {
+    color: var(--color-white);
+}
+
 .modal__header h2 {
     margin-bottom: 0;
     font-size: clamp(1.45rem, 5vw, 2rem);
