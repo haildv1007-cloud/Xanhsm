@@ -1159,6 +1159,19 @@ select:focus-visible {
     font-size: 1.5rem;
 }
 
+.modal__close:focus-visible {
+    outline: 2px solid var(--color-aqua);
+    outline-offset: -3px;
+}
+
+@media (max-width: 767px) {
+    .modal__close {
+        border-width: 1px;
+        font-size: 1.25rem;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
 .modal__body {
     max-height: calc(88dvh - 7rem);
     padding: 1.25rem;
