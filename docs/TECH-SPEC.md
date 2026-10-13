@@ -296,6 +296,7 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 ### Điều chỉnh giao diện mobile — 13/10/2026
 
 - Giảm chiều cao thanh menu dưới, khoảng cách icon–nhãn và độ nhô nút Đăng ký; giữ vùng chạm lớn hơn 44px cùng safe area. Đồng thời cân lại vị trí bong bóng hỗ trợ và khoảng trống footer theo chiều cao mới.
+- Đồng nhất input và select của form inline/modal ở chiều cao 54.4px, toàn chiều rộng cột. Select tắt giao diện mặc định khác nhau giữa trình duyệt, dùng mũi tên CSS và vẫn mở bộ chọn native của thiết bị để giữ hiệu năng, khả năng truy cập và độ ổn định trên Safari iOS/Chrome Android.
 
 ### Điều chỉnh Taxi theo phản hồi hình ảnh — 13/10/2026
 
