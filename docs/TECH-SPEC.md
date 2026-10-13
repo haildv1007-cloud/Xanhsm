@@ -307,3 +307,9 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 - Kiểm tra lại 360/390/768/1440px, ảnh hero, anchor Xem quyền lợi và CTA đăng ký; không tràn ngang. PHP lint các file sửa và `php scripts/check-pages.php http://127.0.0.1:8173` PASS. Ảnh `output/taxi-qa/*-v2.png` là bản hero mới; ảnh QA không có hậu tố v2 ghi nhận lần triển khai trước phản hồi này.
 
 - Phản hồi cuối: đã bỏ toàn bộ section “Công việc của bạn / Cùng Taxi điện, đón những hành trình mới”, bỏ dữ liệu intro và CSS không dùng; quyền lợi nối ngay sau form. Lint PHP/JS và smoke check bốn route/404/anchor sau thay đổi đều PASS.
+
+### Rà soát nội dung Taxi, RTO và Van — 13/10/2026
+
+- Đã đối chiếu nguồn tuyển dụng Taxi và tin chính sách RTO/Van, giới thiệu dịch vụ Van của Green SM; bảng nguồn và quyết định biên tập ở `docs/CONTENT-AUDIT-2026-10-13.md`. Các trang cũ người dùng cung cấp hiện không tải được qua công cụ tra cứu nên không khẳng định đã đọc nội dung ở đó.
+- `content/taxi.php`, `content/rto.php`, `content/van.php` đã viết lại thẻ quyền lợi, phần chính sách trong thẻ/FAQ và quy trình theo cơ chế cụ thể của từng loại hình. Taxi nêu rõ phạm vi tài xế công ty; RTO nêu cấu trúc thuê và mua lại; Van nêu giao nhận hàng, ứng dụng, đào tạo và phạm vi chính sách người mới. Không đăng mức tiền hoặc ưu đãi ngắn hạn.
+- Kiểm tra local: PHP lint ba file content PASS; `php scripts/check-pages.php http://127.0.0.1:8186` PASS cho bốn landing, route thành công và 404; `git diff --check` PASS. Chưa kiểm trên production. Trước khi chạy quảng cáo cần xác nhận lại phạm vi khu vực tuyển, hình thức/xe RTO và chính sách đang áp dụng thực tế.

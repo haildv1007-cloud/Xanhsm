@@ -137,6 +137,7 @@ Trang hiện tại chỉ chọn sẵn giá trị khi có ánh xạ rõ ràng; kh
 - Theo yêu cầu mới nhất, phần chia sẻ dùng đúng ba ảnh hiện có của Bike, cùng nguồn dữ liệu `content/driver-stories.php` và component chung; không thêm lời chứng thực hoặc con số mới.
 - Không có ba thẻ hình thức và popup chi tiết riêng của Bike. Nội dung chưa được cung cấp dùng lời tư vấn trung tính, không tự liệt kê hạng bằng lái, hồ sơ bắt buộc, tiền cọc, thu nhập hoặc lịch nhận xe.
 - Người dùng đã bổ sung ảnh tham khảo quyền lợi/giấy tờ Taxi: chủ động thời gian, đối soát doanh thu, lương cứng/bảo hiểm, cộng đồng, vận hành điện, hướng dẫn ứng dụng và kỹ thuật; giấy tờ gồm CCCD/hộ chiếu, bằng B/B2 (trao đổi cách dùng trên VNeID), lý lịch tư pháp số 2, giấy khám sức khỏe người lái xe. Dùng nội dung này ở mức tham khảo, có ngữ cảnh theo chương trình/khu vực; không đưa cam kết nhận xe trong ngày, miễn phí hoặc hỗ trợ 24/7 thành lời hứa cố định.
+- Bản chỉnh nội dung mới: quyền lợi Taxi phải nêu rõ cơ chế của hình thức tài xế công ty (xe được bố trí, lương cứng + doanh số/thưởng, hợp đồng và bảo hiểm), cách theo dõi kết quả vận doanh và bước làm quen xe/ứng dụng. Nêu phạm vi “tài xế công ty” ngay tại thẻ tương ứng, không làm người đọc hiểu đây là quyền lợi chung cho mọi hình thức. Quy trình đi từ gửi thông tin đến bắt đầu nhận chuyến; hạn chế các câu chỉ hẹn tư vấn.
 - Tiêu đề popup dùng chung phải là “Đăng ký nhận tư vấn”. Chỉ chọn sẵn phương tiện/hình thức theo ánh xạ cấu hình đã có. Taxi hiện để trống hai lựa chọn này.
 - Form inline/modal đồng bộ trong bộ nhớ trang, gồm tùy chọn Zalo cùng số điện thoại; không lưu dữ liệu hồ sơ vào localStorage hoặc URL. Khi backend được cấu hình, form gửi đến endpoint chung và chỉ báo thành công sau khi hồ sơ cùng job thông báo đã được commit.
 - Hỗ trợ không có nút x riêng; thu gọn bằng nút Hỗ trợ, tạm ẩn khi vị trí nổi chồng lên form, countdown, CTA hoặc footer. Gọi/Zalo khóa khi thiếu cấu hình thật.
@@ -148,3 +149,9 @@ Trang hiện tại chỉ chọn sẵn giá trị khi có ánh xạ rõ ràng; kh
 - Bỏ section “Trao đổi trước khi tham gia”. Không lặp lại một section chính sách riêng giữa lợi ích và giấy tờ.
 - Điểm nổi bật tập trung vào hướng tới sở hữu phương tiện, không cần có xe sẵn, chủ động công việc và được hướng dẫn từng bước.
 - Hạn chế lặp các cụm “lộ trình”, “trao đổi” và “chương trình áp dụng”; ưu tiên câu ngắn, trực tiếp và dễ hiểu.
+- Bản chỉnh nội dung mới: giải thích RTO bằng cơ chế thuê xe để vận doanh, khoản thuê/cọc/kỳ hạn, cơ hội mua lại sau thời gian thuê hoặc trước hạn theo chính sách. Trình bày như cấu trúc phương án, không đăng mức tiền cố định hoặc hứa chắc quyền sở hữu. Giấy tờ chỉ liệt kê giấy tờ, không chèn “thông tin muốn thuê” vào danh sách giấy tờ.
+
+## 11. Nội dung Van — cập nhật ngày 13/10/2026
+
+- Quyền lợi và công việc phải cho thấy tài xế lái EC Van giao nhận hàng nội đô, trạng thái đơn/đối soát qua ứng dụng, đào tạo quy trình và chính sách cho người mới. Nếu nhắc hỗ trợ thu nhập hoặc sạc xe, nêu rõ phạm vi địa bàn/giai đoạn và điều kiện vận doanh, không biến chương trình ngắn hạn thành lời hứa chung.
+- Quy trình gồm gửi thông tin, nắm công việc/chính sách, chuẩn bị và làm quen, rồi bắt đầu nhận đơn sau khi hoàn tất thủ tục. Tránh lặp câu “được tư vấn” ở các bước.
