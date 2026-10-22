@@ -16,7 +16,7 @@ final class TelegramMessageFormatter
         ];
         $vehicleLabels = [
             'electric-bike' => 'Xe Máy ( Xanh Bike )',
-            'electric-car' => 'Ô Tô ( Xanh Taxi )',
+            'electric-car' => 'Xe Taxi ( Xanh Taxi )',
             'van' => 'Xe Van ( Xanh Van )',
         ];
         $sourceUrl = (string) ($lead['source_url'] ?? '');
@@ -32,14 +32,14 @@ final class TelegramMessageFormatter
         }
 
         return implode("\n", [
-            '<b>Thông báo dữ liệu từ Xanh</b>',
-            'Họ tên: ' . $escape($lead['full_name']),
-            'Số điện thoại: ' . $escape($lead['phone']),
-            'Khu vực: ' . $escape($label('regions', $lead['region'])),
-            'Số Zalo: ' . $escape($lead['zalo'] ?: 'Không cung cấp'),
-            'Hình thức: ' . $escape($participationLabels[(string) $lead['cooperation_type']] ?? $label('cooperation_types', $lead['cooperation_type'])),
-            'Phương tiện: ' . $escape($vehicleLabels[(string) $lead['vehicle']] ?? $label('vehicles', $lead['vehicle'])),
-            'Số CCCD: ' . $escape($citizenId ?: 'Không cung cấp'),
+            'Thông báo dữ liệu từ LadiPage',
+            'name : ' . $escape($lead['full_name']),
+            'phone : ' . $escape($lead['phone']),
+            'Khu Vực Hoạt Động : ' . $escape($label('regions', $lead['region'])),
+            'Số Điện Thoại Zalo Liên Hệ : ' . $escape($lead['zalo'] ?: 'Không cung cấp'),
+            'Phương Tiện : ' . $escape($vehicleLabels[(string) $lead['vehicle']] ?? $label('vehicles', $lead['vehicle'])),
+            'Bạn Đã Có Xe Vinfast? : ' . $escape($participationLabels[(string) $lead['cooperation_type']] ?? $label('cooperation_types', $lead['cooperation_type'])),
+            'Số CCCD Của Bạn : ' . $escape($citizenId ?: 'Không cung cấp'),
             'Nguồn từ: ' . $escape($sourceUrl),
         ]);
     }

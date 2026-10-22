@@ -287,6 +287,7 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 - Tin lead chính được gửi dạng tin nhắn thuần để bộ đọc Telegram bên ngoài tiếp tục nhận diện và đếm lead. Sau khi lead được đánh dấu gửi thành công, bot gửi một tin trả lời ngắn có `reply_markup` với bốn `CopyTextButton`: Họ tên, SĐT, Zalo và CCCD, xếp hai hàng.
 - Lỗi gửi bảng nút copy không làm retry hoặc gửi trùng lead đã đến nhóm; worker chỉ ghi cảnh báo không chứa dữ liệu hồ sơ.
 - PHP lint và `php scripts/test-lead-service.php` PASS; test xác nhận tin nhắn không còn thẻ code và đủ bốn giá trị sao chép đúng.
+- Tin lead chính giữ nguyên các nhãn của mẫu tích hợp cũ để dashboard bên ngoài tiếp tục parse và đếm: `Thông báo dữ liệu từ LadiPage`, `name`, `phone`, `Khu Vực Hoạt Động`, `Số Điện Thoại Zalo Liên Hệ`, `Phương Tiện`, `Bạn Đã Có Xe Vinfast?`, `Số CCCD Của Bạn` và `Nguồn từ`. Không thêm dòng IP gốc vì ứng dụng chỉ lưu IP đã băm và không thể khôi phục địa chỉ cá nhân.
 
 ### Bằng chứng SEO, GTM và tối ưu tải trang local — 13/10/2026
 
