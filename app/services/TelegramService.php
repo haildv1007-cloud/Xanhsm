@@ -16,22 +16,30 @@ final class TelegramService
         }
     }
 
-    /** @return array{message_id: string} */
-    public function send(string $message): array
+    /**
+     * @param array<string, mixed>|null $replyMarkup
+     * @return array{message_id: string}
+     */
+    public function send(string $message, ?array $replyMarkup = null): array
     {
         $handle = curl_init('https://api.telegram.org/bot' . $this->botToken . '/sendMessage');
         if ($handle === false) {
             throw new RuntimeException('Unable to initialize Telegram request.');
         }
 
+        $payload = [
+            'chat_id' => $this->chatId,
+            'text' => $message,
+            'parse_mode' => 'HTML',
+            'disable_web_page_preview' => 'true',
+        ];
+        if ($replyMarkup !== null) {
+            $payload['reply_markup'] = json_encode($replyMarkup, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR);
+        }
+
         curl_setopt_array($handle, [
             CURLOPT_POST => true,
-            CURLOPT_POSTFIELDS => http_build_query([
-                'chat_id' => $this->chatId,
-                'text' => $message,
-                'parse_mode' => 'HTML',
-                'disable_web_page_preview' => 'true',
-            ]),
+            CURLOPT_POSTFIELDS => http_build_query($payload),
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_CONNECTTIMEOUT => 5,
             CURLOPT_TIMEOUT => 15,

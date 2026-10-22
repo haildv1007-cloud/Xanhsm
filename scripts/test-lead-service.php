@@ -127,12 +127,24 @@ $message = TelegramMessageFormatter::build([
     'source_url' => 'https://example.test/?gclid=test&campaign=sample',
 ], $config, '000000000000');
 assertTrue(str_starts_with($message, '<b>Thông báo dữ liệu từ Xanh</b>'), 'thông báo Telegram có tiêu đề nổi bật');
-assertTrue(str_contains($message, 'Họ tên: <code>Người Kiểm Thử</code>'), 'họ tên có thể sao chép riêng');
-assertTrue(str_contains($message, 'Số điện thoại: <code>0900000000</code>'), 'số điện thoại có thể sao chép riêng');
-assertTrue(str_contains($message, 'Khu vực: <code>Đồng Nai</code>'), 'khu vực có thể sao chép riêng');
-assertTrue(str_contains($message, 'Hình thức: <code>Chưa Có ( Chạy Xe Công Ty )</code>'), 'thông báo Telegram ánh xạ loại hình theo mẫu');
-assertTrue(str_contains($message, 'Phương tiện: <code>Xe Máy ( Xanh Bike )</code>'), 'thông báo Telegram ánh xạ phương tiện theo mẫu');
-assertTrue(str_contains($message, 'Số CCCD: <code>000000000000</code>'), 'CCCD có thể sao chép riêng');
-assertTrue(str_contains($message, 'Nguồn từ: <code>https://example.test/?gclid=test&amp;campaign=sample</code>'), 'nguồn đăng ký được escape an toàn cho Telegram HTML');
+assertTrue(str_contains($message, 'Họ tên: Người Kiểm Thử'), 'họ tên hiển thị dạng văn bản thường');
+assertTrue(str_contains($message, 'Số điện thoại: 0900000000'), 'số điện thoại hiển thị dạng văn bản thường');
+assertTrue(str_contains($message, 'Khu vực: Đồng Nai'), 'khu vực được ánh xạ đúng');
+assertTrue(str_contains($message, 'Hình thức: Chưa Có ( Chạy Xe Công Ty )'), 'thông báo Telegram ánh xạ loại hình theo mẫu');
+assertTrue(str_contains($message, 'Phương tiện: Xe Máy ( Xanh Bike )'), 'thông báo Telegram ánh xạ phương tiện theo mẫu');
+assertTrue(str_contains($message, 'Số CCCD: 000000000000'), 'CCCD hiển thị dạng văn bản thường');
+assertTrue(str_contains($message, 'Nguồn từ: https://example.test/?gclid=test&amp;campaign=sample'), 'nguồn đăng ký được escape an toàn cho Telegram HTML');
+assertTrue(!str_contains($message, '<code>'), 'thông báo không còn dùng khối code để highlight dữ liệu');
+
+$keyboard = TelegramMessageFormatter::copyKeyboard([
+    'full_name' => 'Người Kiểm Thử',
+    'phone' => '0900000000',
+    'zalo' => '0900000001',
+], '000000000000');
+assertTrue(count($keyboard['inline_keyboard']) === 2, 'bàn phím sao chép có hai hàng');
+assertTrue($keyboard['inline_keyboard'][0][0]['copy_text']['text'] === 'Người Kiểm Thử', 'nút sao chép họ tên giữ đúng giá trị');
+assertTrue($keyboard['inline_keyboard'][0][1]['copy_text']['text'] === '0900000000', 'nút sao chép số điện thoại giữ đúng giá trị');
+assertTrue($keyboard['inline_keyboard'][1][0]['copy_text']['text'] === '0900000001', 'nút sao chép Zalo giữ đúng giá trị');
+assertTrue($keyboard['inline_keyboard'][1][1]['copy_text']['text'] === '000000000000', 'nút sao chép CCCD giữ đúng giá trị');
 
 fwrite(STDOUT, "Lead service tests completed.\n");

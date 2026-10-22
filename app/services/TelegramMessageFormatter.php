@@ -8,7 +8,6 @@ final class TelegramMessageFormatter
     public static function build(array $lead, array $formConfig, ?string $citizenId): string
     {
         $escape = static fn (mixed $value): string => htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-        $copyable = static fn (mixed $value): string => '<code>' . $escape($value) . '</code>';
         $label = static fn (string $group, mixed $value): string => (string) ($formConfig['options'][$group][(string) $value] ?? $value);
         $participationLabels = [
             'company' => 'Chưa Có ( Chạy Xe Công Ty )',
@@ -34,14 +33,39 @@ final class TelegramMessageFormatter
 
         return implode("\n", [
             '<b>Thông báo dữ liệu từ Xanh</b>',
-            'Họ tên: ' . $copyable($lead['full_name']),
-            'Số điện thoại: ' . $copyable($lead['phone']),
-            'Khu vực: ' . $copyable($label('regions', $lead['region'])),
-            'Số Zalo: ' . $copyable($lead['zalo'] ?: 'Không cung cấp'),
-            'Hình thức: ' . $copyable($participationLabels[(string) $lead['cooperation_type']] ?? $label('cooperation_types', $lead['cooperation_type'])),
-            'Phương tiện: ' . $copyable($vehicleLabels[(string) $lead['vehicle']] ?? $label('vehicles', $lead['vehicle'])),
-            'Số CCCD: ' . $copyable($citizenId ?: 'Không cung cấp'),
-            'Nguồn từ: ' . $copyable($sourceUrl),
+            'Họ tên: ' . $escape($lead['full_name']),
+            'Số điện thoại: ' . $escape($lead['phone']),
+            'Khu vực: ' . $escape($label('regions', $lead['region'])),
+            'Số Zalo: ' . $escape($lead['zalo'] ?: 'Không cung cấp'),
+            'Hình thức: ' . $escape($participationLabels[(string) $lead['cooperation_type']] ?? $label('cooperation_types', $lead['cooperation_type'])),
+            'Phương tiện: ' . $escape($vehicleLabels[(string) $lead['vehicle']] ?? $label('vehicles', $lead['vehicle'])),
+            'Số CCCD: ' . $escape($citizenId ?: 'Không cung cấp'),
+            'Nguồn từ: ' . $escape($sourceUrl),
         ]);
+    }
+
+    /**
+     * @param array<string, mixed> $lead
+     * @return array{inline_keyboard: list<list<array{text: string, copy_text: array{text: string}}>>}
+     */
+    public static function copyKeyboard(array $lead, ?string $citizenId): array
+    {
+        $copyButton = static fn (string $label, mixed $value): array => [
+            'text' => '📋 ' . $label,
+            'copy_text' => ['text' => (string) ($value ?: 'Không cung cấp')],
+        ];
+
+        return [
+            'inline_keyboard' => [
+                [
+                    $copyButton('Họ tên', $lead['full_name'] ?? ''),
+                    $copyButton('SĐT', $lead['phone'] ?? ''),
+                ],
+                [
+                    $copyButton('Zalo', $lead['zalo'] ?? ''),
+                    $copyButton('CCCD', $citizenId),
+                ],
+            ],
+        ];
     }
 }

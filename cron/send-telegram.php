@@ -73,7 +73,10 @@ try {
 
         try {
             $citizenId = Encryption::decrypt($job['citizen_id_encrypted'] ?? null);
-            $result = $telegram->send(TelegramMessageFormatter::build($job, $formConfig, $citizenId));
+            $result = $telegram->send(
+                TelegramMessageFormatter::build($job, $formConfig, $citizenId),
+                TelegramMessageFormatter::copyKeyboard($job, $citizenId),
+            );
             $sent = $database->prepare("UPDATE telegram_jobs SET status = 'sent', attempts = attempts + 1, sent_at = CURRENT_TIMESTAMP, locked_at = NULL, telegram_message_id = :message_id, last_error = NULL, updated_at = CURRENT_TIMESTAMP WHERE id = :id");
             $sent->execute(['message_id' => $result['message_id'], 'id' => $job['job_id']]);
             workerOutput('Sent lead ' . $job['public_id'] . PHP_EOL);

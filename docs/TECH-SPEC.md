@@ -278,8 +278,14 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 - `php scripts/test-lead-service.php` PASS: dữ liệu hợp lệ, chuẩn hóa điện thoại, một lead + một job, CCCD không lưu rõ và giải mã đúng, retry cùng token không tạo trùng, dữ liệu sai bị từ chối, Zalo/CCCD trống hợp lệ.
 - Kiểm thử endpoint bằng SQLite tạm: lần đầu trả 201 và mã `XS-*`; gửi lại cùng token trả cùng mã với `duplicate=true`; điện thoại sai trả 422 cùng lỗi trường. Database thử đã được xóa sau kiểm tra.
 - Worker `cron/send-telegram.php` dùng Bot API gửi vào group qua `TELEGRAM_CHAT_ID`, giữ message ID, named lock chống chạy chồng, phục hồi job processing quá hạn và retry có backoff/failed. Có thể gọi bằng CLI hoặc endpoint `/cron/send-telegram` với header secret/query token. Nội dung theo mẫu người dùng cung cấp và gồm URL nguồn; chưa gọi Telegram thật vì chưa có bot token/group ID.
-- Thông báo Telegram dùng HTML an toàn: tiêu đề in đậm và giá trị của từng trường nằm trong thẻ code riêng để nổi bật, hỗ trợ sao chép từng giá trị thuận tiện trên ứng dụng di động. Nhãn giữ dạng văn bản thường; dữ liệu được escape trước khi ghép HTML.
+- Thông báo Telegram giữ nội dung dạng văn bản thường, không bọc giá trị bằng thẻ code. Bên dưới tin nhắn có bàn phím inline 2 × 2 gồm các nút sao chép Họ tên, SĐT, Zalo và CCCD để thao tác trực tiếp trên Telegram mobile; dữ liệu vẫn được escape trước khi ghép HTML.
 - `php scripts/check-pages.php`, PHP lint toàn dự án và `node --check public/assets/js/app.js` PASS. Trình duyệt mobile 390px không tràn ngang; required và 17 tỉnh/thành đúng; khi DB chưa cấu hình, form báo tạm gián đoạn, giữ nguyên dữ liệu và console không có error/warning.
+
+### Cập nhật nút sao chép Telegram — 22/10/2026
+
+- Bỏ thẻ `<code>` từng dùng để highlight giá trị vì thao tác chọn/copy không ổn định trên Telegram mobile.
+- `sendMessage` gửi thêm `reply_markup` với bốn `CopyTextButton`: Họ tên, SĐT, Zalo và CCCD, xếp hai hàng. Nút sao chép trực tiếp giá trị tương ứng mà không gửi thêm tin nhắn vào nhóm.
+- PHP lint và `php scripts/test-lead-service.php` PASS; test xác nhận tin nhắn không còn thẻ code và đủ bốn giá trị sao chép đúng.
 
 ### Bằng chứng SEO, GTM và tối ưu tải trang local — 13/10/2026
 
