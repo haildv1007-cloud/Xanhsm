@@ -126,14 +126,13 @@ $message = TelegramMessageFormatter::build([
     'source_page' => 'bike',
     'source_url' => 'https://example.test/?gclid=test&campaign=sample',
 ], $config, '000000000000');
-assertTrue(str_starts_with($message, 'Thông báo dữ liệu từ LadiPage'), 'thông báo Telegram giữ tiêu đề mà bộ đếm lead nhận diện');
-assertTrue(str_contains($message, 'name : Người Kiểm Thử'), 'họ tên giữ đúng nhãn tương thích');
-assertTrue(str_contains($message, 'phone : 0900000000'), 'số điện thoại giữ đúng nhãn tương thích');
-assertTrue(str_contains($message, 'Khu Vực Hoạt Động : Đồng Nai'), 'khu vực giữ đúng nhãn tương thích');
-assertTrue(str_contains($message, 'Số Điện Thoại Zalo Liên Hệ : 0900000001'), 'Zalo giữ đúng nhãn tương thích');
-assertTrue(str_contains($message, 'Phương Tiện : Xe Máy ( Xanh Bike )'), 'phương tiện giữ đúng nhãn tương thích');
-assertTrue(str_contains($message, 'Bạn Đã Có Xe Vinfast? : Chưa Có ( Chạy Xe Công Ty )'), 'hình thức giữ đúng nhãn tương thích');
-assertTrue(str_contains($message, 'Số CCCD Của Bạn : 000000000000'), 'CCCD giữ đúng nhãn tương thích');
+assertTrue(str_starts_with($message, '<b>Thông báo dữ liệu từ Xanh</b>'), 'thông báo Telegram có tiêu đề nổi bật');
+assertTrue(str_contains($message, 'Họ tên: Người Kiểm Thử'), 'họ tên hiển thị dạng văn bản thường');
+assertTrue(str_contains($message, 'Số điện thoại: 0900000000'), 'số điện thoại hiển thị dạng văn bản thường');
+assertTrue(str_contains($message, 'Khu vực: Đồng Nai'), 'khu vực được ánh xạ đúng');
+assertTrue(str_contains($message, 'Hình thức: Chưa Có ( Chạy Xe Công Ty )'), 'thông báo Telegram ánh xạ loại hình theo mẫu');
+assertTrue(str_contains($message, 'Phương tiện: Xe Máy ( Xanh Bike )'), 'thông báo Telegram ánh xạ phương tiện theo mẫu');
+assertTrue(str_contains($message, 'Số CCCD: 000000000000'), 'CCCD hiển thị dạng văn bản thường');
 assertTrue(str_contains($message, 'Nguồn từ: https://example.test/?gclid=test&amp;campaign=sample'), 'nguồn đăng ký được escape an toàn cho Telegram HTML');
 assertTrue(!str_contains($message, '<code>'), 'thông báo không còn dùng khối code để highlight dữ liệu');
 
