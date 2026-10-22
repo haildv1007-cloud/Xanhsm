@@ -44,9 +44,9 @@ return [
             'van' => 'Xe van',
         ],
         'cooperation_types' => [
+            'rto' => 'RTO — thuê xe sở hữu',
             'company' => 'Chạy xe công ty — chưa có xe',
             'platform' => 'Platform — có xe sẵn',
-            'rto' => 'RTO — thuê xe sở hữu',
         ],
     ],
     'rate_limit' => ['attempts' => 5, 'minutes' => 10],

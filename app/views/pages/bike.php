@@ -1,5 +1,12 @@
 <?php
 declare(strict_types=1);
+
+$participationOptions = $page['participation_options'];
+$participationOrder = ['rto' => 0, 'company' => 1, 'platform' => 2];
+usort(
+    $participationOptions,
+    static fn (array $left, array $right): int => ($participationOrder[$left['key']] ?? 99) <=> ($participationOrder[$right['key']] ?? 99)
+);
 ?>
 <section class="bike-hero">
     <div class="bike-hero__media">
@@ -42,7 +49,7 @@ declare(strict_types=1);
             <h2 id="participation-title">Bạn muốn tham gia theo hình thức nào?</h2>
         </div>
         <div class="participation-list">
-            <?php foreach ($page['participation_options'] as $option): ?>
+            <?php foreach ($participationOptions as $option): ?>
                 <article class="participation-card">
                     <img src="<?= e(asset($option['image'])) ?>" width="<?= e((string) $option['image_width']) ?>" height="<?= e((string) $option['image_height']) ?>" loading="lazy" decoding="async" alt="Minh họa <?= e($option['title']) ?>">
                     <div class="participation-card__content">
@@ -100,5 +107,5 @@ declare(strict_types=1);
     </div>
 </dialog>
 
-<script type="application/json" id="participation-data"><?= json_encode($page['participation_options'], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP) ?></script>
+<script type="application/json" id="participation-data"><?= json_encode($participationOptions, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP) ?></script>
 

@@ -50,9 +50,9 @@ Không thay phần lợi ích bằng danh sách liên kết sang trang khác. Gi
 
 | Thẻ | Đối tượng | Hành động |
 | --- | --- | --- |
+| Thuê xe sở hữu | Tìm hiểu phương án RTO | Mở popup chi tiết RTO |
 | Chạy xe công ty | Chưa có xe | Mở popup chi tiết công ty |
 | Platform | Đã có xe | Mở popup chi tiết Platform |
-| Thuê xe sở hữu | Tìm hiểu phương án RTO | Mở popup chi tiết RTO |
 
 - Thẻ có ảnh, mô tả ngắn, nút “Xem chi tiết”; dùng trắng/xanh, không dùng vàng.
 - Mobile xếp dọc để rõ; desktop có thể ba cột.
@@ -79,9 +79,11 @@ Cả form trực tiếp và form popup trên bốn trang dùng cùng định ngh
 
 Nhãn loại hình đầy đủ:
 
+- “RTO — thuê xe sở hữu”.
 - “Chạy xe công ty — chưa có xe”.
 - “Platform — có xe sẵn”.
-- “RTO — thuê xe sở hữu”.
+
+Thứ tự hiển thị loại hình trong form và ba thẻ “Lựa chọn phù hợp” của Bike: **RTO → Chạy xe công ty → Platform**.
 
 Trang hiện tại chỉ chọn sẵn giá trị khi có ánh xạ rõ ràng; không suy đoán RTO luôn là Bike. Tổ hợp khu vực/phương tiện/loại hình hợp lệ phải được cấu hình và kiểm tra ở server.
 
