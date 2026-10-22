@@ -73,12 +73,22 @@ try {
 
         try {
             $citizenId = Encryption::decrypt($job['citizen_id_encrypted'] ?? null);
-            $result = $telegram->send(
-                TelegramMessageFormatter::build($job, $formConfig, $citizenId),
-                TelegramMessageFormatter::copyKeyboard($job, $citizenId),
-            );
+            // Keep the lead itself as a plain bot message so existing Telegram readers can count it.
+            $result = $telegram->send(TelegramMessageFormatter::build($job, $formConfig, $citizenId));
             $sent = $database->prepare("UPDATE telegram_jobs SET status = 'sent', attempts = attempts + 1, sent_at = CURRENT_TIMESTAMP, locked_at = NULL, telegram_message_id = :message_id, last_error = NULL, updated_at = CURRENT_TIMESTAMP WHERE id = :id");
             $sent->execute(['message_id' => $result['message_id'], 'id' => $job['job_id']]);
+
+            try {
+                $telegram->send(
+                    'Sao chép nhanh thông tin hồ sơ:',
+                    TelegramMessageFormatter::copyKeyboard($job, $citizenId),
+                    $result['message_id'],
+                );
+            } catch (Throwable) {
+                // Copy controls are optional; never retry or duplicate a delivered lead because they failed.
+                workerOutput('Copy buttons unavailable for lead ' . $job['public_id'] . PHP_EOL, true);
+            }
+
             workerOutput('Sent lead ' . $job['public_id'] . PHP_EOL);
         } catch (Throwable $exception) {
             $attempt = (int) $job['attempts'] + 1;

@@ -284,7 +284,8 @@ Chỉ đổi thành “Hoàn tất” khi đáp ứng đầu ra và điều ki�
 ### Cập nhật nút sao chép Telegram — 22/10/2026
 
 - Bỏ thẻ `<code>` từng dùng để highlight giá trị vì thao tác chọn/copy không ổn định trên Telegram mobile.
-- `sendMessage` gửi thêm `reply_markup` với bốn `CopyTextButton`: Họ tên, SĐT, Zalo và CCCD, xếp hai hàng. Nút sao chép trực tiếp giá trị tương ứng mà không gửi thêm tin nhắn vào nhóm.
+- Tin lead chính được gửi dạng tin nhắn thuần để bộ đọc Telegram bên ngoài tiếp tục nhận diện và đếm lead. Sau khi lead được đánh dấu gửi thành công, bot gửi một tin trả lời ngắn có `reply_markup` với bốn `CopyTextButton`: Họ tên, SĐT, Zalo và CCCD, xếp hai hàng.
+- Lỗi gửi bảng nút copy không làm retry hoặc gửi trùng lead đã đến nhóm; worker chỉ ghi cảnh báo không chứa dữ liệu hồ sơ.
 - PHP lint và `php scripts/test-lead-service.php` PASS; test xác nhận tin nhắn không còn thẻ code và đủ bốn giá trị sao chép đúng.
 
 ### Bằng chứng SEO, GTM và tối ưu tải trang local — 13/10/2026
