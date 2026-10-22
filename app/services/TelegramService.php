@@ -20,7 +20,7 @@ final class TelegramService
      * @param array<string, mixed>|null $replyMarkup
      * @return array{message_id: string}
      */
-    public function send(string $message, ?array $replyMarkup = null, ?string $replyToMessageId = null): array
+    public function send(string $message, ?array $replyMarkup = null): array
     {
         $handle = curl_init('https://api.telegram.org/bot' . $this->botToken . '/sendMessage');
         if ($handle === false) {
@@ -35,12 +35,6 @@ final class TelegramService
         ];
         if ($replyMarkup !== null) {
             $payload['reply_markup'] = json_encode($replyMarkup, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR);
-        }
-        if ($replyToMessageId !== null && $replyToMessageId !== '') {
-            $payload['reply_parameters'] = json_encode(
-                ['message_id' => (int) $replyToMessageId],
-                JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR,
-            );
         }
 
         curl_setopt_array($handle, [
